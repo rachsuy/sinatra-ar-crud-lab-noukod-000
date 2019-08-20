@@ -1,0 +1,15 @@
+<html>
+  <head>
+    <title> new blog post</title>
+  </head>
+  <body>
+<h1>The selected Post</h1>
+<h2>Name: <%= @post.name %></h2>
+<h2>Content: <%= @post.content %> </h2>
+
+<form method="post" action="/posts/<%= @post.id %>/delete">
+  <input id="hidden" type="hidden" name="_method" value="delete">
+  <input type="submit" value="delete">
+</form>
+ </body>
+</html>
